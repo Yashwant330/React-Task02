@@ -1,8 +1,8 @@
 import React from 'react'
 
-const comp1 = ({setToggle}) => {
+const Comp1 = ({setToggle}) => {
   return (
-    <div className='h-screen flex justify-center items-center'>
+     <div className='h-screen flex justify-center items-center'>
       <div className=' relative flex items-center justify-center flex-col h-120 w-90 bg-white rounded-xl border gap-3 p-3'>
         <h1 className=' absolute top-10 text-2xl font-bold'>Create Account</h1>
         <h2 className='absolute top-20 text-xl font-semibold'>Join us today</h2>
@@ -16,16 +16,18 @@ const comp1 = ({setToggle}) => {
          <h3 className='absolute top-70 left-10'>Password</h3>
         <div className='absolute top-75 h-10 w-70 border'></div>
 
-  <button onClick={()=>{
-    setToggle(prev=>!prev)
-  }}
-  className='absolute bottom-20 text-2xl font-semibold border rounded-xl bg-blue-600 px-25 py-1'>Sign-up</button>
-        <p className='text-xl absolute bottom-5'>Already have account?<button className='font-semibold underline decoration-red-500 cursor-pointer'>Sign-in</button></p>
+         <h3 className='absolute top-91 left-10 text-white z-10 text-2xl font-semibold left-32'>SIGN UP</h3>
+        <div className='absolute top-90 h-10 w-70 border  bg-blue-500'></div>
 
+                  <span className='absolute bottom-10'>Already have account?<button className='underline decoration-red-500' onClick={()=>{
+ 
+                setToggle(false)
 
-      </div>
-    </div>
+                  }}>Sign-In</button></span>
+
+        </div>
+        </div>
   )
 }
 
-export default comp1
+export default Comp1
